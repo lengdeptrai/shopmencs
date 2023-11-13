@@ -1,0 +1,84 @@
+﻿
+/* Truy vấn phương tiện cho thiết bị di động (kích thước màn hình nhỏ hơn 768px) */
+@media only screen and (max-width: 767px) {
+    main {
+        display: block;
+    }
+
+    main .information {
+        width: 100%;
+        height: 380px;
+    }
+
+    .information .productName {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .information .productPrice {
+        height: 60px;
+    }
+
+    div#UpdatePanel1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .information .productPrice {
+        margin-top: 5px;
+    }
+    .productPrice #priceSale {
+        font-size: 25px;
+    }
+
+    .productPrice #priceOld {
+        font-size: 20px;
+    }
+
+    .information .productColor, .information .productSize, .information .productQuantity, .information .productBtn {
+        height: 40px;
+    }
+
+    .information .productColor, .information .productSize {
+        margin-left: 30px;
+    }
+
+    .productQuantity, .information .productBtn {
+        justify-content: center;
+    }
+
+    footer .description-text {
+        font-size: 18px;
+        height: 40px;
+    }
+
+    footer .description {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+    }
+}
+
+@media (min-width : 740px) and (max-width : 1023px){
+    main {
+        display: block;
+    }
+
+    main .information {
+            width: 100%;
+            height: 565px;
+    }
+
+    div#UpdatePanel1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .information .productColor, .information .productSize {
+        margin-left: 30px;
+    }
+
+    .productQuantity, .information .productBtn {
+        justify-content: center;
+    }
+}

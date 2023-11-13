@@ -1,0 +1,370 @@
+﻿body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background-color: #e7e7e7;
+}
+
+#form {
+    width: 100%;
+    position: relative;
+}
+
+#form header {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+header img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   position: center center;
+   background-color: white;
+}
+nav {
+    width: 100%;
+    background-color: #808080;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    z-index: 2;
+}
+
+nav ul {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    height: 100%;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor :pointer;
+}
+
+    nav ul li.active {
+        background-color: #df5e04;
+    }
+
+nav ul li:hover{
+    background-color: #f47b26;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+#tableProduct{
+    position: relative;
+    margin-top: 70px;
+}
+
+#tableProduct #headerTableProduct {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+
+#tableProduct #bodyTableProduct{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#tableProduct #bodyTableProduct div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+    #tableProduct #bodyTableProduct div table {
+        width: 1050px;
+        height: 300px;
+        display: flex;
+        overflow-y: auto;
+        justify-content: center;
+        position: relative;
+    }
+
+
+    div#headerTableProduct ul {
+        display: flex;
+        padding: 0;
+        width: 1035px;
+        height: 100%;
+        list-style: none;
+        justify-content: center;
+        margin-right: 15px;
+        position: relative;
+    }
+
+div#headerTableProduct ul li{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #f6a266;
+}
+
+div#headerTableProduct ul li:nth-child(1){
+    width: 45px;
+}
+div#headerTableProduct ul li:nth-child(3),
+div#headerTableProduct ul li:nth-child(4),
+div#headerTableProduct ul li:nth-child(6),
+div#headerTableProduct ul li:nth-child(7),
+div#headerTableProduct ul li:nth-child(8){
+    width: 100px;
+}
+
+div#headerTableProduct ul li:nth-child(2),
+div#headerTableProduct ul li:nth-child(5){
+    width:250px;
+
+}
+
+#productView tr {
+    height:100px; /* Chiều cao của mỗi hàng là 100px */
+    background-color: #f2f2f2; /* Màu nền cho các dòng chẵn */
+}
+
+    #productView tr:nth-child(even) {
+        background-color: #ffffff; /* Màu nền cho các dòng lẻ */
+    }
+
+/* Định dạng các ô trong GridView */
+#productView td {
+    height: 100%;
+    border: 1px solid #ccc; /* Viền của ô */
+    text-align: center; /* Căn lề văn bản theo giữa */
+    white-space: nowrap; /* Ngăn chặn việc xuống dòng nếu văn bản quá dài */
+    overflow: hidden; /* Ẩn nội dung vượt quá chiều rộng */
+    text-overflow: ellipsis; /* Hiển thị dấu "..." nếu văn bản vượt quá chiều rộng */
+}
+#productView td:nth-child(1){
+    width: 50px;
+    max-width: 50px;
+}
+#productView td:nth-child(3),
+#productView td:nth-child(4),
+#productView td:nth-child(6),
+#productView td:nth-child(7),
+#productView td:nth-child(8){
+    width: 100px;
+    max-width: 100px;
+    max-width: 100px;
+}
+
+
+    #productView td:nth-child(2),
+    #productView td:nth-child(5) {
+        width: 250px;
+        max-width: 250px;
+    }
+#productView td textarea,
+#productView td input,
+#tableProductParameters .GridView td input{
+    width: 90%;
+    font-size: 14px;
+    outline: none;
+}
+#productView td a,
+#tableProductParameters .GridView td a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 80px;
+    height: 30px;
+    background-color: #db5f16;
+    color: white;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+
+/* Định dạng ảnh trong GridView */
+#productView img {
+    max-width: 100px; /* Giới hạn chiều rộng tối đa của ảnh */
+    max-height: 100px; /* Giới hạn chiều cao tối đa của ảnh */
+}
+
+#tableProduct #foodterTableProduct,
+#tableProduct #foodterTableProductParameter{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: #f47b26;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+#foodterTableProduct #headerFoodterTableProduct,
+#foodterTableProductParameter #headerFoodterTableProductParameter {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#headerFoodterTableProduct #lbText,
+#headerFoodterTableProductParameter #lbTextParameter {
+    color: white;
+    font-size: 30px;
+}
+
+#foodterTableProduct #bodyFoodterTableProduct,
+#foodterTableProductParameter #bodyFoodterTableProductParameter {
+    height: 100%;
+}
+
+#bodyFoodterTableProduct #bodyFoodterTableProduct-input,
+#bodyFoodterTableProductParameter #bodyFoodterTableProductParameter-input {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+#bodyFoodterTableProduct-input input,
+#bodyFoodterTableProductParameter-input input {
+    width: 200px;
+    margin: 0 5px;
+    padding: 5px;
+    height: 25px;
+    outline: none;
+}
+
+#bodyFoodterTableProduct #bodyFoodterTableProduct-choice,
+#bodyFoodterTableProductParameter #bodyFoodterTableProductParameter-choice {
+    width: 100%;
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+
+#bodyFoodterTableProduct-choice ul,
+#bodyFoodterTableProductParameter-choice ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    width: 400px;
+    height: 100%;
+    grid-template-columns: 33% 33% 33%;
+    background-color: #808080;
+    margin: 0 5px;
+}
+
+#bodyFoodterTableProduct-choice ul li,
+#bodyFoodterTableProductParameter-choice ul li{
+    display: flex;
+    align-items: center;
+    justify-content : start;
+    width: 100%;
+    height: 100%;
+    font-size : 16px;
+    cursor : pointer;
+}
+#bodyFoodterTableProduct-choice ul li input,
+#bodyFoodterTableProductParameter-choice ul li input{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+#bodyFoodterTableProduct-choice #addImage,
+#bodyFoodterTableProductParameter-choice #addImage {
+    width: 350px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bodyFoodterTableProduct-choice #addFoodterTableProduct,
+#bodyFoodterTableProductParameter-choice #addFoodterTableProductParameter {
+    width: 140px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#addFoodterTableProduct input,
+#addFoodterTableProductParameter input {
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #2ec124;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#addFoodterTableProduct input:hover,
+#addFoodterTableProductParameter input:hover{
+    background-color: #4ee844;
+}
+
+
+#tableProductParameters {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    max-height: 350px;
+    overflow-y: auto;
+    margin-bottom : 20px;
+}
+
+
+#tableProductParameters .GridView {
+    width: 800px; /* Đặt kích thước bảng tùy thuộc vào số cột và chiều dài mong muốn */
+    table-layout: fixed;
+}
+
+#tableProductParameters .GridView th,
+#tableProductParameters .GridView td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+#tableProductParameters .GridView th {
+    position: sticky;
+    top: 0;
+    background-color: #48ed3d; /* Màu nền của header */
+    z-index: 1;
+}
+
+#tableProductParameters .GridView img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Để hình ảnh không bị bóp méo */
+}

@@ -1,0 +1,432 @@
+﻿body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background-color: #e7e7e7;
+}
+
+#form{
+    width: 100%;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position: fixed;
+    top:0;
+    z-index: 1;
+}
+header img{
+    width: 100%;
+    height:100%;
+    object-fit: contain;
+    position:center center;
+    background-color:white;
+}
+
+main{
+    margin:auto;
+    background-color:white;
+    width: 85%;
+    margin-top:120px;
+    display:flex;
+    justify-content: space-between;
+}
+
+main .view-img {
+  position: relative;
+  background-color: white;
+  width: 450px;
+  height:575px;
+}
+.view-img .imgMain {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.imgMain img{
+    width:90%;
+    height:90%;
+    cursor:pointer;
+    transition:.3s;
+}
+.imgMain:hover img{
+    width:95%;
+    height:95%;
+}
+.view-img .relatedProducts {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.relatedProducts .listRelated{
+    position: relative;
+    list-style: none;
+    margin:0;
+    margin-left: 5px;
+    padding:0;
+    display: flex;
+    width: 2000px;
+    height: 100%;
+
+}
+
+.listRelated li{
+    position: relative;
+    width: 100px;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+
+.listRelated li img{
+    width: 90%;
+    height: 90%;
+    transition:.3s;
+}
+.listRelated li:hover img{
+    width: 95%;
+    height: 95%;
+}
+
+.relatedProducts .btn {
+    position: absolute;
+    font-size: 14px;
+    color: white;
+    width: 25px;
+    height: 30px;
+    background-color: #535353;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display:none;
+    cursor:pointer;
+    transition:.3s;
+}
+.relatedProducts .btn:hover{
+    transform:scale(1.2);
+}
+
+.relatedProducts .btnPrev {
+    left: 0px;
+    top: 45px;
+}
+
+.relatedProducts .btnNext {
+    right:0;
+    top: 45px;
+}
+
+.relatedProducts:hover .btn{
+    display:flex;
+}
+
+main .information {
+    width: 600px;
+    height: 575px;
+}
+
+.information .productName {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-weight: 500;
+    margin: 0;
+    vertical-align: sub;
+    max-height: 3rem;
+    line-height: 1.5rem;
+    overflow: hidden;
+    max-width: 41.5625rem;
+    font-size: 1.25rem;
+    overflow-wrap: break-word;
+}
+
+.productName .iconShop {
+    position: relative;
+    margin-right: 10px;
+    border-radius: 2px;
+    display: inline-flex;
+    color: white;
+    height: 25px;
+    font-size: 16px;
+}
+
+
+.iconShop.onLike .isLike,
+.iconShop.onMail .isMail{
+    display: flex;
+}
+
+.iconShop .isLike {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orangered;
+    border-radius: 3px;
+    height: 100%;
+    display: none;
+}
+
+.isLike i {
+    margin: 0 2px;
+}
+
+.isLike span{
+    margin: 0 2px;
+}
+
+.iconShop .isMail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 3px;
+    height: 100%;
+    display: none;
+}
+
+.isMail span{
+    margin: 0 4px;
+}
+
+.information .productPrice {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #fafafa;
+    margin-top: 20px;
+    height: 100px;
+}
+
+.productPrice #priceOld {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    color: #929292;
+    margin: 0 10px;
+}
+
+.productPrice #priceSale {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #ee4d2d;
+    margin-right: 20px;
+}
+
+.productPrice #isSale {
+    height: 20px;
+    background-color: #d0011b;
+    color: white;
+    border-radius: 3px;
+    text-align :center;
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.information .productColor,
+.information .productSize,
+.information .productQuantity,
+.information .productBtn{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.productColor span,
+.productSize span,
+.productQuantity span:first-child {
+    font-size: 18px;
+    color: #757575;
+    width: 100px;
+}
+
+.productColor .listColor,
+.productSize .listSize{
+    width: auto;
+    display: flex;
+    padding: 0;
+    margin: 0 25px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.listColor .color,
+.listSize .size{
+    position: relative;
+    min-width: 25px;
+    max-width: 40px;
+    height: 20px;
+    padding: 5px 10px;
+    border: 1px #757575 solid;
+    margin: 5px;
+    cursor: pointer;
+    transition :0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align : center;
+    flex: 1;
+}
+
+.listColor .color:hover,
+.listSize .size:hover{
+    border-color: orangered;
+}
+
+.listColor .color:hover span,
+.listSize .size:hover span{
+    color: orangered;
+}
+
+.color.selectColor,
+.size.selectSize{
+    border-color: orangered;
+}
+
+.color.selectColor .icon,
+.size.selectSize .icon{
+    display: block;
+}
+
+
+.color .icon,
+.size .icon{
+    position: absolute;
+    right: 0;
+    bottom : 0;
+    border-color: transparent orangered orangered transparent;
+    border-width: 10px;
+    border-style: solid;
+    display: none;
+}
+
+.color .icon i,
+.size .icon i{
+    font-size: 10px;
+    color: white;
+    position: absolute;
+}
+
+.productQuantity .inputQuantity{
+    display: flex;
+    align-items: center;
+    margin: 0 25px;
+}
+
+.inputQuantity #reduce,
+.inputQuantity #increase {
+    background-color: transparent;
+    border: 1px #757575 solid;
+    width: 35px;
+    height: 35px;
+    color: #757575;
+    font-size: 22px;
+    cursor: pointer;
+    text-align: center;
+    margin : 0 5px;
+}
+
+.inputQuantity #inputQuantity{
+    width: 50px;
+    height: 30px;
+    color: #757575;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+}
+
+.productQuantity span:last-child {
+    font-size: 14px;
+    color: #757575;
+}
+
+.productBtn .addCart,
+.productBtn #buyNow{
+    width: 200px;
+    height: 40px;
+    background-color: #ed5117;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 40px 10px 0 10px;
+    border-radius: 4px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .4s;
+    border: none;
+}
+
+.productBtn .addCart:hover,
+.productBtn #buyNow:hover{
+    opacity: 0.9;
+}
+
+.addCart span{
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+.addCart i{
+    font-size: 20px;
+}
+
+.productBtn #buyNow {
+    background-color: #e91818;
+    height: 45px;
+    font-size: 16px;
+}
+
+footer {
+    margin: 50px auto;
+    width: 85%;
+    background-color: white;
+}
+
+footer .description-text{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.12);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: orangered;
+    background-color: rgba(0, 0, 0, 0.24);
+    font-weight: 500;
+}
+
+footer .description{
+    width: 100%;
+    height: auto;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.description span{
+    display: block;
+    padding: 20px;  
+    width: 80%;
+    white-space: pre-line;
+}

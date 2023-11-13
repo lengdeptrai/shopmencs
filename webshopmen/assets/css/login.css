@@ -1,0 +1,195 @@
+﻿body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    padding: 0;
+    margin: 0;
+}
+
+    body #form1 {
+        width: 100%;
+        height: 100%;
+        background-image: url(../imgs/backgroundLogin.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        body #form1 .cover {
+            position: absolute;
+            width: 800px;
+            height: 600px;
+            left: 50%;
+            top: 50%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            transform: translate(-50%, -50%);
+            background-image: url(../imgs/backgroundLogin.png);
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+            body #form1 .cover .contentForm {
+                margin-right: 15px;
+                width: 400px;
+                height: 500px;
+                overflow: hidden;
+                position:relative;
+            }
+                body #form1 .cover .contentForm #login,
+                body #form1 .cover .contentForm #register {
+                    width: 100%;
+                    height: 370px;
+                    text-align: center;
+                    position: relative;
+                    animation: animation .5s linear;
+                    z-index: 0;
+                }
+#login h2,
+#register h2{
+    font-size: 26px;
+    color: white;
+}
+
+#register{
+    display: none;
+}
+
+
+#statusLogin {
+    display: block;
+    position: absolute;
+    left: 45px;
+    top : 40px;
+    color: Red;
+    font-size: 14px;
+}
+.inputLogin{
+    width: 300px;
+    height: 25px;
+    padding: 5px 5px;
+    outline: none;
+    font-size: 14px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+}
+.radio {
+    position: absolute;
+    display: block;
+    color: white;
+    left: 45px;
+}
+.btn {
+    width: 300px;
+    height: 35px;
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 14px;
+    color: white;
+    background-color: lawngreen;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn:hover{
+    opacity: 0.7;
+}
+
+.btnFa{
+    background-color: blue;
+}
+.btnGG{
+    background-color: red;
+}
+
+body #form1 .cover .contentForm .btnController {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+    z-index: 0;
+}
+#isLogin,
+#isRegister{
+    position: relative;
+    font-size: 14px;
+    width: 150px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    transition : 1s;
+}
+
+#isLogin{
+    left: 45px;
+}
+#isRegister{
+    right: 45px;
+}
+
+#isLogin.active,
+#isRegister.active{
+    color: white;
+    background-color: orangered;
+}
+
+body #form1 .cover .contentForm div#scanner-container {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 400px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#scanner-container video{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#scanner-container #stop-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #fa2e2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 3px;
+}
+
+#stop-button i {
+    font-size : 16px;
+    color :white;
+}
+
+@keyframes animation {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

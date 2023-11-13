@@ -1,0 +1,41 @@
+﻿/* Truy vấn phương tiện cho tablet (kích thước màn hình từ 768px đến 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body #form1 .cover{
+        width: 100%;
+    }
+}
+
+/* Truy vấn phương tiện cho thiết bị di động (kích thước màn hình nhỏ hơn 768px) */
+@media only screen and (max-width: 767px) {
+    body #form1 .cover {
+        width: 100%;
+        justify-content: center;
+    }
+
+   body #form1 .cover .contentForm{
+       width: 100%;
+   }
+
+    .inputLogin {
+        width: 90%;
+        height: 20px;
+        font-size: 12px;
+        margin: 5px 0px;
+    }
+
+    .btn {
+        width: 90%;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .radio {
+        display: none;
+    }
+
+    #isLogin, #isRegister {
+        font-size: 12px;
+        width: 35%;
+    }
+}
